@@ -1,0 +1,51 @@
+{
+  "name": "raise-cuddly-octopus",
+  "displayName": "Raise cuddly octopus",
+  "version": "0.0.0",
+  "description": "A basic Plasmo extension.",
+  "author": "aryaarun",
+  "scripts": {
+    "dev": "plasmo dev",
+    "build": "plasmo build",
+    "package": "plasmo package"
+  },
+  "dependencies": {
+    "@plasmohq/storage": "^0.14.0",
+    "axios": "^1.2.2",
+    "cheerio": "1.0.0-rc.12",
+    "firebase": "^9.15.0",
+    "firebase-react-hooks": "^0.8.0",
+    "plasmo": "0.62.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sanitize-html": "^2.8.1"
+  },
+  "devDependencies": {
+    "@plasmohq/prettier-plugin-sort-imports": "3.6.0",
+    "@types/chrome": "0.0.202",
+    "@types/firebase": "^3.2.1",
+    "@types/jquery": "^3.5.16",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "@types/sanitize-html": "^2.8.0",
+    "prettier": "2.7.1",
+    "typescript": "4.9.3"
+  },
+  "manifest": {
+    "key": "$CRX_PUBLIC_KEY",
+    "host_permissions": [
+      "https://*/*"
+    ],
+    "permissions": [
+      "identity"
+    ],
+    "oauth2": {
+      "client_id": "$PLASMO_PUBLIC_FIREBASE_CLIENT_ID",
+      "scopes": [
+        "https://www.googleapis.com/auth/userinfo.email",
+        "https://www.googleapis.com/auth/userinfo.profile"
+      ]
+    }
+  }
+}
